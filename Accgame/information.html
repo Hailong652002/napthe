@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="head">
+        <div class="head-info">
+            <img src="logo.png" alt="logo">
+            <ul class="head-nav">
+                <li>TRANG CHỦ</li>
+                <li>NẠP TIỀN</li>
+                <li>NẠP ATM/MOMO TẶNG 25% (AUTO)</li>
+                <a href="" class="info-user">MINH QUANG</a>
+                <a href="" class="logout">ĐĂNG XUẤT</a>
+            </ul>
+        </div>
+    </div>
+    <div class="body">
+        <div class="body-info">
+            <div class="body-avata">
+                <img src="avata.jpg" alt="avata" >
+            </div>
+            <h2 class="id">Minh Quang - ( ID: 100000 )</h2> 
+
+            <div class="body-content ">
+                <div class="body-container">
+                    <ul class="container-info">
+                        <h3>TÀI KHOẢN</h3>
+                        <li> <a class="js-info"  href="#">Thông tin tài khoản</a></li>
+                        <li><a class="js-pass" href="#">Đổi mật khẩu</a></li>
+                    </ul>
+                    <ul class="container-info">
+                        <h3>Giao dịch</h3>
+                        <li>Nạp thẻ cào tự động</li>
+                        <li>Nạp thẻ ATM/MOMO tự động</li>
+                        <li>Lịch sử nạp thẻ</li>
+                        <li>Lịch sử thanh toán</li>
+                    </ul>
+                </div>
+
+                <div class="body-container-info js-content">
+                    <ul class="information">
+                        <h3>Thông tin tài khoản </h3>
+                        <li>ID TÀI KHOẢN :</li>
+                        <li>TÊN HIỂN THỊ :</li>
+                        <li>TÊN TÀI KHOẢN :</li>
+                        <li>SỐ ĐIỆN THOẠI :</li>
+                    </ul>
+                </div>
+
+                <div class="reset_password js-resetpass">
+                    <ul class="information">
+                        <h3>ĐỔI MẬT KHẨU</h3>
+                        <input type="text" placeholder="Mật khẩu cũ" class="pass-old">
+                        <input type="text" placeholder="Mật khẩu mới" class="pass-new">
+                        <button class="resetpass-btn">Đổi mật khẩu</button>
+                    </ul>
+                </div>
+                
+            </div>
+
+        </div>          
+    </div>
+    ​
+</body>
+<script>
+    const info = document.querySelector('.js-info')
+    const pass = document.querySelector('.js-pass')    
+    const content = document.querySelector('.js-content')
+    const resetpass = document.querySelector('.js-resetpass')
+    
+    
+
+    function show_infomation(){
+        content.classList.add('open')
+        resetpass.classList.remove('open')
+    }
+
+    function show_resetpass(){
+        content.classList.remove('open')
+        resetpass.classList.add('open')
+    }
+
+    info.addEventListener('click',show_infomation)
+    pass.addEventListener('click',show_resetpass)
+</script>
+</html>
